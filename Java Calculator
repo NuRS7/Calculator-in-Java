@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.println("Введите первое число");
+        double firstNumer = console.nextInt();
+        System.out.println("Введите первое операцию" );
+        char operation = console.next().charAt(0);
+        System.out.println("Введите второе число:");
+        double secondNumer = console.nextInt();
+        double result = 0;
+
+
+
+        if (operation == '+') {
+            result = (firstNumer + secondNumer);
+        }
+        else if (operation == '-') {
+            result = (firstNumer - secondNumer);
+        }
+        else if (operation == '*') {
+            result = (firstNumer * secondNumer);
+        }
+        else if (operation == '/') {
+            result = (firstNumer / secondNumer);
+            if (secondNumer != 0){
+                result = (firstNumer / secondNumer);
+            }
+            else {
+                System.out.println("ERROR");
+            }
+        }
+        System.out.println(firstNumer + " " + operation+ " "+ secondNumer+ " "+ "= "+ result);
+
+
+    }
+}
